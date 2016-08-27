@@ -7,7 +7,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net;
 
-namespace Launcher //dont cry bb, it was a mistake
+namespace Launcher //STOP CRYING I FIXED IT GOD DAMN IT
 {
     class AppGameInfo
     {
