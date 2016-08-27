@@ -7,7 +7,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net;
 
-namespace WindowsFormsApplication1 //dont cry bb, it was a mistake
+namespace Launcher //dont cry bb, it was a mistake
 {
     class AppGameInfo
     {

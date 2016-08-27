@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace Launcher
 {
     partial class Form1
     {
@@ -200,6 +200,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.WebBrowser webBrowser1;
     }
-    
+
 }
 
