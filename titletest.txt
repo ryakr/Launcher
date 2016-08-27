@@ -8,6 +8,7 @@ SecondButtonName=TestButton2
 description=Ryan is a massive cock sucking faggot
 icon=http://shit.com/icon.png
 Version=1
+//comment test
 ThirdTitle=Test3
 ThirdButtonName=TestButton3
 description=Ryan is a massive cock sucking faggot
