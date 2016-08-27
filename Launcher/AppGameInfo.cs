@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         {
             gameinfo = new Dictionary<string, string>();
             WebClient client = new WebClient();
-            string reply = client.DownloadString("https://gist.githubusercontent.com/ryakr/2e225835fdf7a1e511fc051ae4b50e33/raw/374ad38e917d767c944b44b0135189d850667dd3/test.txt");
+            string reply = client.DownloadString("https://gist.githubusercontent.com/ryakr/2e225835fdf7a1e511fc051ae4b50e33/raw/374ad38e917d767c944b44b0135189d850667dd3/test.txt"); //test url
             foreach (string line in reply.Split('\n'))
             {
                 string[] line_components = line.Split('=');
