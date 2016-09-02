@@ -14,7 +14,7 @@ namespace Launcher
     class DownloadHandle
     {
         public static ProgressBar DownloadBar;
-        private static string lastDownloadedFile = "RYANFAPSTOFURRYPORN.FAP";
+        private static string lastDownloadedFile = "App.config";
         private static List<string> downloadList = new List<string>();
         public static void Initialize(ProgressBar DownloadProgress)
         {
@@ -40,12 +40,9 @@ namespace Launcher
             WebClient webClient = new WebClient();
             webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
             webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
-            if (downloadList.Count > 0)
-            {
-                lastDownloadedFile = downloadList[0];
-                string downloadlink = "https://raw.githubusercontent.com/ryakr/Launcher/master/" + lastDownloadedFile;
-                webClient.DownloadFileAsync(new Uri(downloadlink), lastDownloadedFile);
-            }
+            string downloadlink = "https://raw.githubusercontent.com/ryakr/Launcher/master/" + lastDownloadedFile;
+            Console.WriteLine(downloadlink);
+            webClient.DownloadFileAsync(new Uri(downloadlink), lastDownloadedFile);
         }
         private static void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
