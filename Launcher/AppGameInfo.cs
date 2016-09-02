@@ -29,14 +29,17 @@ namespace Launcher //STOP CRYING I FIXED IT GOD DAMN IT
         {
             if (!gameinfo.ContainsKey(fileDataName + "Title"))
             {
-                throw new Exception("Dumbass, this doesn't exist in the file ;)"); //a nice notification that the author done fucked up
+                Console.WriteLine("Dumbass, this doesn't exist in the file ;) " + fileDataName); //a nice notification that the author done fucked up
             }
-            if (gameinfo[fileDataName + "Title"] == "null") //hiding unexisting buttons
+            if (gameinfo.ContainsKey(fileDataName + "Title") && gameinfo[fileDataName + "Title"] == "null") //hiding unexisting buttons
             {
                 btn.Visible = false;
                 return;
             }
-            btn.Text = gameinfo[fileDataName + "ButtonName"];
+            if (gameinfo.ContainsKey(fileDataName + "Title"))
+            {
+                btn.Text = gameinfo[fileDataName + "ButtonName"];
+            }
         }
     }
 }

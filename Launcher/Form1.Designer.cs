@@ -41,6 +41,7 @@
             this.Nine = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -60,7 +61,7 @@
             this.First.Name = "First";
             this.First.Size = new System.Drawing.Size(143, 31);
             this.First.TabIndex = 1;
-            this.First.Text = "button1";
+            this.First.Text = "First";
             this.First.UseVisualStyleBackColor = false;
             this.First.Click += new System.EventHandler(this.First_Click);
             // 
@@ -148,8 +149,9 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(191, 450);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(427, 23);
+            this.progressBar1.Size = new System.Drawing.Size(314, 23);
             this.progressBar1.TabIndex = 10;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // webBrowser1
             // 
@@ -160,11 +162,22 @@
             this.webBrowser1.TabIndex = 11;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(511, 449);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Download";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 486);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Seventh);
@@ -177,9 +190,11 @@
             this.Controls.Add(this.Second);
             this.Controls.Add(this.First);
             this.Controls.Add(this.listView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Launchy McLauncherson";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -199,6 +214,7 @@
         private System.Windows.Forms.Button Nine;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Button button1;
     }
 
 }

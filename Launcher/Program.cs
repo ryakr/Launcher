@@ -15,7 +15,7 @@ namespace Launcher
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false); //Ooooo I should touch these
             Application.Run(new Form1());
         }
     }

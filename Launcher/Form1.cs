@@ -15,19 +15,17 @@ namespace Launcher
     {
         public Form1()
         {
-
             InitializeComponent();
         }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //¯\_(ツ)_/¯
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
+            DownloadHandle.Initialize(progressBar1);
             AppGameInfo.Initialize();
-            //use something
             MessageBox.Show("game title is " + AppGameInfo.gameinfo["FirstTitle"] + "\n" + "Version is " + AppGameInfo.gameinfo["Version"]); //current tester of URL
             foreach (Control ctrl in this.Controls)
             {
@@ -46,6 +44,16 @@ namespace Launcher
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             //jack shit for ever probably
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DownloadHandle.BeginDownload(sender, e);
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
