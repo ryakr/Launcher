@@ -24,7 +24,7 @@ namespace Launcher
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            DownloadHandle.Initialize(progressBar1);
+            DownloadHandle.Initialize(progressBar1, label1);
             AppGameInfo.Initialize();
             MessageBox.Show("game title is " + AppGameInfo.gameinfo["FirstTitle"] + "\n" + "Version is " + AppGameInfo.gameinfo["Version"]); //current tester of URL
             foreach (Control ctrl in this.Controls)
@@ -38,7 +38,7 @@ namespace Launcher
 
         private void First_Click(object sender, EventArgs e)
         {
-            //jack shit right now
+            DownloadHandle.ButtonChange("https://raw.githubusercontent.com/ryakr/Launcher/master/filelist.txt", "https://raw.githubusercontent.com/ryakr/Launcher/master/");
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -51,9 +51,9 @@ namespace Launcher
             DownloadHandle.BeginDownload(sender, e);
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
+        private void Second_Click(object sender, EventArgs e)
         {
-          
+            DownloadHandle.ButtonChange("https://raw.githubusercontent.com/ryakr/Launcher/master/filelist.txt", "https://raw.githubusercontent.com/ryakr/Launcher/master/");
         }
     }
 }

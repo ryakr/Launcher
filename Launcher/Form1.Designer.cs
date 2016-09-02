@@ -42,10 +42,13 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
             // 
+            this.listView1.Enabled = false;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(173, 462);
@@ -57,7 +60,7 @@
             // 
             this.First.BackColor = System.Drawing.Color.Transparent;
             this.First.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.First.Location = new System.Drawing.Point(23, 21);
+            this.First.Location = new System.Drawing.Point(28, 21);
             this.First.Name = "First";
             this.First.Size = new System.Drawing.Size(143, 31);
             this.First.TabIndex = 1;
@@ -68,17 +71,18 @@
             // Second
             // 
             this.Second.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Second.Location = new System.Drawing.Point(23, 71);
+            this.Second.Location = new System.Drawing.Point(28, 71);
             this.Second.Name = "Second";
             this.Second.Size = new System.Drawing.Size(143, 31);
             this.Second.TabIndex = 2;
             this.Second.Text = "button2";
             this.Second.UseVisualStyleBackColor = true;
+            this.Second.Click += new System.EventHandler(this.Second_Click);
             // 
             // Third
             // 
             this.Third.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Third.Location = new System.Drawing.Point(23, 122);
+            this.Third.Location = new System.Drawing.Point(28, 122);
             this.Third.Name = "Third";
             this.Third.Size = new System.Drawing.Size(143, 31);
             this.Third.TabIndex = 3;
@@ -88,7 +92,7 @@
             // Sixth
             // 
             this.Sixth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sixth.Location = new System.Drawing.Point(23, 272);
+            this.Sixth.Location = new System.Drawing.Point(28, 272);
             this.Sixth.Name = "Sixth";
             this.Sixth.Size = new System.Drawing.Size(143, 31);
             this.Sixth.TabIndex = 6;
@@ -98,7 +102,7 @@
             // Fith
             // 
             this.Fith.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fith.Location = new System.Drawing.Point(23, 221);
+            this.Fith.Location = new System.Drawing.Point(28, 221);
             this.Fith.Name = "Fith";
             this.Fith.Size = new System.Drawing.Size(143, 31);
             this.Fith.TabIndex = 5;
@@ -108,7 +112,7 @@
             // Fourth
             // 
             this.Fourth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fourth.Location = new System.Drawing.Point(23, 171);
+            this.Fourth.Location = new System.Drawing.Point(28, 171);
             this.Fourth.Name = "Fourth";
             this.Fourth.Size = new System.Drawing.Size(143, 31);
             this.Fourth.TabIndex = 4;
@@ -118,7 +122,7 @@
             // Seventh
             // 
             this.Seventh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Seventh.Location = new System.Drawing.Point(23, 323);
+            this.Seventh.Location = new System.Drawing.Point(28, 323);
             this.Seventh.Name = "Seventh";
             this.Seventh.Size = new System.Drawing.Size(143, 31);
             this.Seventh.TabIndex = 9;
@@ -128,7 +132,7 @@
             // Eight
             // 
             this.Eight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Eight.Location = new System.Drawing.Point(23, 372);
+            this.Eight.Location = new System.Drawing.Point(28, 372);
             this.Eight.Name = "Eight";
             this.Eight.Size = new System.Drawing.Size(143, 31);
             this.Eight.TabIndex = 8;
@@ -138,7 +142,7 @@
             // Nine
             // 
             this.Nine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Nine.Location = new System.Drawing.Point(23, 421);
+            this.Nine.Location = new System.Drawing.Point(28, 421);
             this.Nine.Name = "Nine";
             this.Nine.Size = new System.Drawing.Size(143, 31);
             this.Nine.TabIndex = 7;
@@ -149,22 +153,21 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(191, 450);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(314, 23);
+            this.progressBar1.Size = new System.Drawing.Size(412, 23);
             this.progressBar1.TabIndex = 10;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // webBrowser1
             // 
             this.webBrowser1.Location = new System.Drawing.Point(192, 21);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(426, 423);
+            this.webBrowser1.Size = new System.Drawing.Size(524, 404);
             this.webBrowser1.TabIndex = 11;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(511, 449);
+            this.button1.Location = new System.Drawing.Point(609, 450);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 23);
             this.button1.TabIndex = 12;
@@ -172,11 +175,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(191, 428);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 13;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 486);
+            this.ClientSize = new System.Drawing.Size(728, 487);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.progressBar1);
@@ -197,6 +210,7 @@
             this.Text = "Launchy McLauncherson";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -215,6 +229,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 
 }
